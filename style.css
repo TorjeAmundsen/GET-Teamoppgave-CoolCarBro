@@ -1,0 +1,74 @@
+:root {
+  --bg-color: hsl(0, 0%, 24%);
+  --text-color: hsl(0, 0, 100%);
+}
+
+body {
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.road-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 760px;
+  height: 100vh;
+  background-color: hsl(240, 6%, 10%);
+  border-right: 16px solid hsl(0, 0%, 45%);
+  border-left: 16px solid hsl(0, 0%, 45%);
+}
+
+.yellow-stripes {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.25rem;
+  height: 125vh;
+  overflow-y: hidden;
+  background: linear-gradient(0deg, transparent 50%, #cac718 50%);
+  background-size: 2rem 20rem;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  animation: moveRoadLines 2s infinite linear;
+}
+
+@keyframes moveRoadLines {
+  0% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
+
+#player {
+  width: 10rem;
+  height: 14rem;
+  background-color: red;
+  border-radius: 40px;
+  position: absolute;
+  top: 70%;
+  transition: 33ms linear;
+}
+
+.banana {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: yellow;
+}
+
+.screw {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+}
