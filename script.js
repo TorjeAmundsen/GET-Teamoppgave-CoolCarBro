@@ -186,5 +186,3 @@ function initializeGame() {
 }
 
 window.addEventListener("DOMContentLoaded", initializeGame);
-
-//End
