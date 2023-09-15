@@ -8,16 +8,6 @@ const money = document.getElementById("money");
 const greetingButtons = document.getElementById("button-container");
 
 const model = {
-  itemsSpawned: 0,
-  homiesSpawned: 0,
-  enemiesSpawned: 0,
-  gameLoop: null,
-  itemSpawnCooldown: false,
-  homieSpawnCooldown: false,
-  itemTimeoutIds: [],
-  homieTimeoutIds: [],
-  currentCorrectGreeting: null,
-  currentHomieIndex: null,
   player: {
     coolness: 25,
     health: 100,
@@ -30,6 +20,16 @@ const model = {
     position: 300,
     interact: true,
   },
+  itemsSpawned: 0,
+  homiesSpawned: 0,
+  enemiesSpawned: 0,
+  gameLoop: null,
+  itemSpawnCooldown: false,
+  homieSpawnCooldown: false,
+  itemTimeoutIds: [],
+  homieTimeoutIds: [],
+  currentCorrectGreeting: null,
+  currentHomieIndex: null,
   activeItems: [],
   activeHomies: [],
   activeEnemies: [],
@@ -121,6 +121,11 @@ function updateView() {
     }
   }
   money.textContent = model.player.money;
+  if (model.player.coolness >= 100) {
+    alert("You won!");
+    clearInterval(model.gameLoop);
+    //Temporary solution
+  }
 }
 
 function getHeight(value) {
