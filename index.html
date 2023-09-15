@@ -8,7 +8,14 @@
   </head>
   <body>
     <div id="app">
-      <div>Bank account:</div>
+      <div id="button-container" class="none">
+        <button onclick="greetHomie(0)">Sup Rock</button>
+        <button onclick="greetHomie(1)">Wassup Beetlejuice</button>
+        <button onclick="greetHomie(2)">*Smoke crack*</button>
+      </div>
+      <div class="bank player-money">
+        Bank account: $<span id="money" class="player-money"></span>
+      </div>
       <div id="shop-container"></div>
       <div class="all-meters">
         <div class="meter-container">
@@ -24,7 +31,6 @@
       </div>
       <div class="road-container">
         <div id="items-container"></div>
-        <div id="enemies-container"></div>
         <div class="yellow-stripes"></div>
         <div id="player"></div>
       </div>
